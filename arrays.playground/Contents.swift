@@ -41,4 +41,32 @@ evenNumbers.contains(3)
 evenNumbers.insert(62, at: 4)
 print(evenNumbers)
 
+let remove = evenNumbers.remove(at: 3)
+print(evenNumbers)
+
+evenNumbers.insert(remove, at: evenNumbers.count)
+print(evenNumbers)
+
+
+evenNumbers.swapAt(1, 2)
+print(evenNumbers)
+
+
+for x in evenNumbers {
+    
+    print(x)
+    
+}
+
+for (bleg, evenNumber) in evenNumbers.enumerated() {
+    print("bleg[\(bleg)]) = \(evenNumber)")
+}
+
+
+
+
+
+
+
+
 

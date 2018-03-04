@@ -36,22 +36,36 @@
  */
 
 // TODO: Write solution here
-let names = ["West", "Sky", "Wen", "Alex", "Ted"]
-let nameConCat = names.reduce("") { result, name in
-    return result + name
-}
-
-print(nameConCat)
+let names = ["West", "Sky", "Wendyln", "Alex", "Tedddddd"]
+//let nameConCat = names.reduce("") { result, name in
+//    return result + name
+//}
+//
+//print(nameConCat)
 
 /*:
  Using the same `names` array, first filter the array to contain only names which have more than four characters in them, and then create the same concatenation of names as in the above exercise. (Hint: you can chain these operations together.) */
 
 // TODO: Write solution here
+let filteredNames = names.filter { name in
+    return name.count > 4
+    }.reduce("") { result, name in
+        return result + name
+}
+
+print(filteredNames)
 
 /*:
 Create a constant dictionary called `namesAndAges` which contains some names as strings mapped to ages as integers. Now use `filter` to create a dictionary containing only people under the age of 18. */
 
 // TODO: Write solution here
+let namesAndAges = ["West": 13, "Sky": 17, "Wendyln": 28, "Alex": 37, "Tedddddd": 38]
+let filtered = namesAndAges.filter { bananna in
+    return bananna.value < 18
+    } .map { bananna in
+        return bananna.key
+}
+print(filtered)
 
 /*:
  Using the same `namesAndAges` dictionary, filter out the adults (those 18 or older) and then use `map` to convert to an array containing just the names (i.e. drop the ages). */

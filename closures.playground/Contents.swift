@@ -89,7 +89,7 @@ let stockSum = stock.reduce(0) { result, pair -> Double in
     return result + (pair.key * Double(pair.value))
 }
 
-print(stockSum) 
+print(stockSum)
 
 
 

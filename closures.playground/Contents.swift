@@ -24,7 +24,13 @@ func operateOnNumbers(_ a: Int, _ b: Int,
 operateOnNumbers(2, 4, operation: multiplyClosure)
 
 
+var addClosure: (Int, Int) -> Int = { a, b  in
+    return a + b
+}
 
+operateOnNumbers(2, 4, operation: addClosure)
 
+//add closure inline
+operateOnNumbers(2, 4, operation: { $0 / $1 })
 
 

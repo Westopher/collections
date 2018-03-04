@@ -59,6 +59,14 @@ func cityState() {
 }
 cityState()
 
+//use this so that you're not returning optionals
+func cityState2(location: [String: String]) {
+    if let state = id["state"], let city = id["city"] {
+        print("\(city), \(state)")
+    }
+}
+cityState2(location: id)
+
 
 
 

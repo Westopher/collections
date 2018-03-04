@@ -34,3 +34,36 @@ operateOnNumbers(2, 4, operation: addClosure)
 operateOnNumbers(2, 4, operation: { $0 / $1 })
 
 
+var counter = 0
+let incrementCount = {
+    counter += 1
+}
+
+func countingClosure() -> () -> Int {
+    var counter = 0
+    let incrementingCounter: () -> Int = {
+        counter += 1
+        return counter
+    }
+    return incrementingCounter
+}
+
+let counter1 = countingClosure()
+let counter2 = countingClosure()
+
+counter1()
+counter1()
+counter1()
+counter1()
+
+
+counter2()
+
+
+
+
+
+
+
+
+
